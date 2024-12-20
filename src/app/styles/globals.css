@@ -1,0 +1,9 @@
+/* styles/globals.css */
+body {
+    background-color: #d6eefd; /* Define a cor de fundo para todo o site */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  

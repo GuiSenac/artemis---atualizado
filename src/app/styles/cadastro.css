@@ -1,0 +1,91 @@
+/* Contêiner externo que centraliza o formulário */
+body{
+  background-color: #D6EEFD;
+}
+
+
+.container-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #27a9d4;
+}
+
+/* Estilos para o contêiner do formulário */
+.container {
+  background-color: #27a9d4;
+  padding: 20px;  /* Reduzindo o padding */
+  border-radius: 8px;  /* Reduzindo o border-radius */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Reduzindo a sombra */
+  width: 100%;
+  max-width: 400px;  /* Reduzindo a largura máxima */
+  text-align: center;
+}
+
+/* Estilo dos contêineres de linhas */
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;  /* Reduzindo o espaçamento */
+  justify-content: flex-start; /* Alinha os elementos à esquerda */
+  margin-bottom: 12px;  /* Reduzindo o espaçamento entre linhas */
+}
+
+/* Estilos dos inputs com largura reduzida */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+  padding: 15px;  /* Reduzindo o padding */
+  border: 1px solid #ced4da;
+  border-radius: 4px;  /* Reduzindo o border-radius */
+  font-size: 12px;  /* Reduzindo o tamanho da fonte */
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 40%;  /* Ajustando a largura para 80% */
+  justify-content: center;
+}
+
+/* Estilos ao focar nos inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+  border-color: #27a9d4;
+  box-shadow: 0 0 4px rgba(39, 169, 212, 0.3);
+  outline: none;
+}
+
+/* Container para centralizar o botão */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;  /* Reduzindo a margem superior */
+}
+
+/* Estilos do botão */
+button[type="submit"] {
+  padding: 8px;  /* Reduzindo o padding */
+  background-color: #27a9d4;
+  color: #fff;
+  border: none;
+  border-radius: 11px;  /* Reduzindo o border-radius */
+  font-size: 14px;  /* Reduzindo o tamanho da fonte */
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 13%;  /* Ajustando a largura para 40% */
+}
+
+button[type="submit"]:hover { 
+  background-color: #1f8fb5;
+}
+
+/* Estilos de erro */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+}

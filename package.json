@@ -1,0 +1,23 @@
+{
+  "name": "artemis-pi-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
+    "next": "^14.2.18",
+    "nodemailer": "^6.9.16",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-slick": "^0.30.2",
+    "sharp": "^0.33.5",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.13"
+  }
+}

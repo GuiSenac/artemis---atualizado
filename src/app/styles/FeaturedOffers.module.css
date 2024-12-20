@@ -1,0 +1,172 @@
+.featuredOffers {
+  text-align: center;
+  padding: 50px;
+}
+
+.featuredOffers h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.featuredOffers p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.offersContainer {
+  display: flex;
+  flex-wrap: nowrap; /* Não permite que os itens quebrem a linha */
+  overflow-x: hidden; /* Oculta a barra de rolagem */
+  gap: 20px;
+  padding-bottom: 10px;
+  cursor: grab; /* Adiciona o cursor de "pegar" */
+}
+
+.offersContainer:active {
+  cursor: grabbing; /* Muda o cursor quando está arrastando */
+}
+
+.offer:hover {
+  transform: translateY(-10px); /* Eleva o card para cima */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar um efeito de destaque */
+}
+
+.offer {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px; /* Diminuí o padding para um ajuste melhor */
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  min-width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column; /* Isso garante que os elementos dentro do card fiquem em coluna */
+  justify-content: space-between; /* Alinha o conteúdo no topo */
+}
+
+.offer h3 {
+  font-size: 2em; /* Aumenta o tamanho do campo "Tenis da Nike" */
+  margin: 10px 0;
+}
+
+.image {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px; /* Diminuí a margem inferior para mais espaço */
+}
+
+.priceContainer {
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease; /* Animação suave */
+  margin-top: 5px; /* Adiciona espaço acima da seção de preços */
+}
+
+.offer:hover .priceContainer {
+  opacity: 1; /* Exibe o preço enquanto o mouse estiver sobre o card */
+  pointer-events: none; /* Evita que o hover seja perdido devido a interações no preço */
+}
+
+.price, .installments {
+  font-size: 1em;
+  color: #333;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 0.5px; /* Reduz ainda mais o espaço entre o preço e o parcelamento */
+  line-height: 1;
+}
+
+.installments {
+  color: #666;
+  line-height: 1;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.image {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px; /* Diminuí a margem inferior para menos espaço */
+}
+
+.featureTitle h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.featuredSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  width: 100px; /* Aumenta a largura do card */
+  height: 50px; /* Diminui a altura do card */
+}
+
+.cardImage {
+  width: 100%;
+  height: 100px; /* Reduz a altura da imagem */
+  object-fit: contain; /* Ajustar a imagem para que ela caiba no espaço sem distorcer */
+  display: block;
+  margin: 0 auto;
+}
+
+.imageContainer {
+  position: relative;
+  height: 175px; /* Reduz a altura do container de imagem */
+}
+
+.cardContent h2 {
+  font-size: 14px; /* Ajuste para diminuir o tamanho do texto */
+  margin: 5px 0; /* Reduz o espaçamento para ajustar ao card menor */
+}
+
+.cardContent p {
+  font-size: 12px; /* Reduz o tamanho do texto */
+  color: #666;
+  margin-bottom: 10px; /* Reduz o espaçamento inferior */
+}
+
+.cardButton {
+  background-color: #ff5a5f;
+  color: black;
+  padding: 6px 12px; /* Reduz o padding do botão */
+  border-radius: 5px;
+  text-decoration: none; /* Remove o sublinhado padrão de links */
+  font-weight: bold;
+}
+
+
+/* Se você quiser destacar a oferta especial */
+.specialOffer {
+  background-color: #d3e7fc; /* Um fundo mais leve para destacar */
+  border: 2px solid #76adff;
+}
+
+.specialOffer h3 {
+  color: black;
+}
+
+.specialOffer .cardButton {
+  background-color: #80bdff;
+}

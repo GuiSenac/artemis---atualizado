@@ -1,0 +1,433 @@
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  .navMenu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navLinks li {
+    display: inline-block;
+  }
+  
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 15px; /* Ajuste conforme necessário */
+    position: relative;
+  }
+  
+  .searchInput {
+    padding: 8px 40px 8px 15px; /* Adiciona espaço à direita para o ícone */
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    width: 200px;
+  }
+  
+  .searchButton {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 15px; /* Posiciona o ícone dentro do campo */
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .searchButton svg {
+    width: 20px;
+    height: 20px;
+    color: #888;
+  }
+  
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Ajuste o espaçamento entre os ícones */
+  }
+  
+  .navLinks a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .navLinks a:hover {
+    color: #007bff;
+  }
+  
+  .searchInput {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    width: 200px;
+  }
+  
+  .searchButton {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+  .searchButton svg {
+    width: 20px;
+    height: 20px;
+    color: #888;
+  }
+  
+  .icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .icon svg {
+    width: 24px;
+    height: 24px;
+    color: #333;
+  }
+  
+  .icon:hover svg {
+    color: #007bff;
+  }
+  
+  .menuItem {
+    position: relative;
+  }
+  
+  .menuItem a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .menuItem:hover .dropdown {
+    display: block;
+  }
+  
+  
+  /* Dropdown */
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 20px; /* Aumentei o padding para mais espaço */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; /* Adiciona uma borda cinza clara */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    z-index: 10;
+    width: auto;
+  }
+  
+  .dropdown ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row; /* Alinha os itens em linha */
+    gap: 30px; /* Espaço entre as colunas */
+  }
+  
+  .dropdown ul li {
+    margin: 0;
+  }
+  
+  .dropdown ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .dropdown ul li a {
+    color: #333; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 5px 10px; /* Adiciona espaço interno */
+    display: block; /* Faz o link ocupar todo o espaço do li */
+  }
+  
+  .dropdown ul li a:hover {
+    background-color: #f0f0f0; /* Fundo cinza claro ao passar o mouse */
+  }
+  
+  
+  /* Certifique-se de que a classe CSS está definida corretamente */
+  .App-logo {
+    height: 90px; /* Ajustado de 80px para 90px */
+    width: 90px;  /* Ajustado de 80px para 90px */
+    border-radius: 30px;
+  }
+ /* SliderComponent.module.css */
+
+ .main2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Contêineres da esquerda e direita */
+.leftSliderContainer,
+.rightSliderContainer {
+  position: relative;
+  width: 250px; /* Definir tamanho fixo para o contêiner */
+  height: 150px; /* Mesmo tamanho da imagem */
+  overflow: hidden; /* Garante que nada ultrapasse o contêiner */
+  border-radius: 8px; /* Combina com o estilo */
+}
+
+/* Sobreposição escura */
+.leftSliderContainer::before,
+.rightSliderContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.37); /* Transparência escura padrão */
+  z-index: 2; /* Sobreposição acima da imagem */
+  transition: background-color 0.3s ease; /* Suaviza o hover */
+}
+
+/* Efeito no hover */
+.leftSliderContainer:hover::before,
+.rightSliderContainer:hover::before {
+  background-color: rgba(0, 0, 0, 0.3); /* Reduz a opacidade */
+}
+
+/* Imagens */
+.leftSliderContainer img,
+.rightSliderContainer img {
+  width: 100%; /* A imagem ocupa o tamanho do contêiner */
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem sem distorcer */
+  position: absolute;
+  z-index: 1; /* Fica atrás da sobreposição */
+}
+
+/* Slider Central */
+.mainSliderContainer {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mainSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.mainSlideImage {
+  border-radius: 6px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mainSlideImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+    
+  
+  .featuresSection {  
+  display: flex;  
+  justify-content: center; /* Centraliza os itens horizontalmente */  
+  align-items: center; /* Centraliza o conteúdo verticalmente */  
+  padding: 26px;  
+  text-align: center; /* Centraliza o texto */  
+  flex-wrap: nowrap; /* Impede que os itens se ajustem em várias linhas */
+  }
+  
+  .textContent {  
+  width: 50%; /* Ajusta a largura do texto */  
+  max-width: 800px; /* Define uma largura máxima */  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center; /* Centraliza o texto */  
+  padding: 20px; /* Adiciona espaçamento interno */
+  }
+  
+  .featureTitle h1 {  
+  font-size: 2.5em; /* Aumenta o tamanho da fonte */  
+  color: #333; /* Ajusta a cor do texto */  
+  margin-bottom: 20px; /* Adiciona espaçamento inferior */
+  }
+  
+  .featuresList {  
+  margin-top: 20px;
+  }
+  
+  .featureItem {  
+  display: flex;  
+  align-items: center;  
+  margin-bottom: 15px;
+  }
+  
+  .icon {  
+  margin-right: 10px;
+  }
+  
+  .icon img {  
+  width: 40px;  
+  height: auto; /* Mantém a proporção */
+  }
+  
+  .featureItem h4 {  
+  margin-bottom: 5px; /* Espaçamento entre o título e o parágrafo */  
+  font-size: 1.5em; /* Ajusta o tamanho da fonte */  
+  color: #333; /* Ajusta a cor do texto */
+  }
+  
+  .featureItem p {  
+  color: #666; /* Cor do texto dos parágrafos */  
+  font-size: 1.2em; /* Ajusta o tamanho da fonte */
+  }
+  
+  .imageContainer {  
+  width: 100%; /* Ajusta a largura do contêiner da imagem */  
+  max-width: 1000px; /* Define uma largura máxima */  
+  display: flex;  
+  justify-content: center; /* Centraliza a imagem horizontalmente */  
+  align-items: center; /* Centraliza a imagem verticalmente */  
+  padding: 20px; /* Ajusta o espaçamento interno */  
+  box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+  }
+  
+  .businessImage {  
+  width: 100%; /* Ajusta a largura da imagem */  
+  height: auto; /* Mantém a proporção */  
+  border-radius: 10px; /* Adiciona bordas arredondadas */  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra à imagem */
+  }
+  
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .footerSection {
+    flex: 1 1 20%;
+    margin: 20px;
+  }
+  
+  .footerSection h3 {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .footerSection p, .footerSection a {
+    color: #aaa;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  .footerSection a:hover {
+    color: #fff;
+  }
+  
+  .quickLinks a {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .brands img {
+    width: 60px;
+    margin-right: 15px;
+    border-radius: 4px;
+  }
+  
+  .appLink {
+    width: 180px;
+    margin: 10px 0;
+  }
+  
+  .socialIcon {
+    width: 40px;
+    height: 40px; 
+    margin-right: 25px;
+  }
+  
+  
+  .newsletterInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .newsletterButton {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: 1px solid #ced4da; /* Borda do botão */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;  /* Ajuste do tamanho da fonte */
+    width: 30%;  /* Faz o botão ocupar a largura total */
+    margin-top: 10px; /* Adiciona um pequeno espaço acima do botão */
+  }
+  
+  .newsletterButton:hover {
+    background-color: #80bdff;
+  }
+  
+  .footerBottom {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px 0;
+    color: #aaa;
+  }
+  
+  .footerBottom p {
+    margin: 0;
+  }
+  
+  /* Ajusta o contêiner dos métodos de pagamento */
+  .paymentMethods {
+    display: flex; /* Alinha as imagens dos cartões horizontalmente */
+    gap: 10px; /* Espaçamento entre as imagens */
+  }
+  
+  /* Define o tamanho das imagens dos cartões de pagamento */
+  .paymentMethods img {
+    width: 60px; /* Define a largura das imagens dos cartões */
+    height: auto; /* Mantém a proporção original das imagens */
+  }
+  
